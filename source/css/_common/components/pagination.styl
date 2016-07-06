@@ -1,0 +1,26 @@
+.pagination{
+  a {
+    display: block;
+    padding: 5px 10px;
+    text-shadow 0 0 1px #fff
+
+    &.prev {
+      &:before {
+        font: 0.9em FontAwesome;
+        color: $blue-bright;
+        content: '\f053';
+        padding-right: 10px;
+      }
+    }
+
+    &.next {
+      &:after {
+        font: 0.9em FontAwesome;
+        color: $blue-bright;
+        content: '\f054';
+        padding-left: 10px;
+      }
+    }
+  }
+}
+

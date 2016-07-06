@@ -1,0 +1,103 @@
+//全局的样式风格{语义化},eg. h1,p是排版需要,所以设置margin-bottom=20px;
+
+html, body { height: 100%; }
+
+body {
+  color: $text-color;
+  font-family: $font-default;
+  font-size: $font-size-default;
+  line-height: $line-height-base;
+  -webkit-font-smoothing: antialiased;//使字体抗锯齿,显示效果更好
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.3em;
+}
+
+h1, h2 , h3, h4 ,h5 ,h6 ,
+p ,
+blockquote {
+  margin-bottom: 20px;
+}
+
+ul { list-style: none; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  word-wrap: break-word;
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+blockquote {
+  position: relative;
+  padding: 30px 38px;
+  font-size: 1em;
+  font-style: normal;
+  text-indent: 0;
+  color: $grey-dim;
+  border: none;
+
+  &:before, &:after {
+    position: absolute;
+    font-family: Arial, serif;
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 700;
+  }
+
+  &:before {
+    content: "“";
+    left: 12px;
+    top: 0;
+    color: $gray-lighter;
+  }
+
+  &:after {
+    content: "”";
+    right: 12px;
+    bottom: -31px;
+    color: $gray-lighter;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+code {
+  padding: 0 5px;
+  word-break: break-all;
+  color: $code-foreground;
+  background: $code-background;
+  font-size: .95em;
+}
+
+pre, code { font-family: $code-font-family; }

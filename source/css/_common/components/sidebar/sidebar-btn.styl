@@ -1,0 +1,45 @@
+.sidebar-btn-archives {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  &:before {
+    content: "\f0c9";
+    font: 18px FontAwesome;
+    font-smoothing();
+    color: $blue-bright;
+  }
+}
+
+.sidebar-btn-home {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  &:before {
+    content: "\f015";
+    font: 20px FontAwesome;
+    font-smoothing();
+    color: $blue-bright;
+  }
+}
+
+.sidebar-btn-open {
+  position: absolute;
+  top:  70px;
+  display: none;
+  padding: 0.2em 0.6em;
+  border-radius: 5px;
+  background: #fff;
+  &:before {
+    content: "\f192";
+    font: 18px FontAwesome;
+    font-smoothing();
+  }
+  +tablet() {
+    display: none!important;
+  }
+  +mobile() {
+    display: none!important;
+  }
+}

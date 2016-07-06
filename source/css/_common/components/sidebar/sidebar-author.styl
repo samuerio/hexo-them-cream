@@ -1,0 +1,41 @@
+.author {
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 1.5em;
+  text-align: center;
+  background-size: 5px auto;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  border-bottom: 1px solid $grey;
+  overflow: hidden;
+}
+
+.author-img {
+  width: w=(110/16)em;
+  height: w;
+  margin: 0 auto;
+  background: no-repeat url("../"+author-img) left top;
+  background-size: w w;
+  border-radius: (w/2);
+  transition: transform 2s ease-out;
+  &:hover {
+    transform: rotateZ(360deg);
+  }
+}
+
+.author-socialInfo {
+  a {
+    display: inline-block;
+    padding: 0.3em;
+  }
+}
+
+
+.icon-github:before,
+.icon-email:before {
+  font: 26px FontAwesome;
+  font-smoothing()
+}
+
+.icon-github:before { content:"\f09b"; }
+.icon-email:before { content:"\f003"; }

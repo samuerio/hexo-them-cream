@@ -1,0 +1,86 @@
+
+.post {
+  position: relative;
+  margin-bottom: 20px;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.post-header {
+
+  time {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .9em;
+    line-height: 1;
+    color: $blue-bright;
+
+    a {
+      color: $gray-lighter;
+    }
+  }
+}
+
+.post-body {
+
+  text-align: justify;
+
+  a {
+    color: $blue-bright;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul li { list-style: square; }
+
+  h3 {
+    font-size: 1.4em;
+    padding-left: 9px;
+    border-left: 5px solid #ff7e79;
+  }
+
+  ul ,
+  iframe {
+    margin-bottom: 20px;
+  }
+
+  ul, ol, dl {
+    margin-left: 20px;
+    ul, ol, dl {
+      margin-top: 0;
+    }
+  }
+
+}
+
+.post-meta {
+  margin-bottom: 20px;
+  font-size: .9em;
+  color: #ddd;
+}
+
+.post-meta-avatar {
+  color: #ddd;
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    vertical-align: bottom;
+  }
+
+  span {
+    padding: 0 10px;
+  }
+}
+
+.post-meta-time {
+  padding-right: 10px;
+}
+
+
+@import "collapse-post";
