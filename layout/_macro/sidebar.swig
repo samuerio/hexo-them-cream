@@ -3,20 +3,19 @@
         <div class="sidebar-inner">
             <div class='author'>
                 <a id='btnCloseSideBar'  class='sidebar-btn-archives' href='#' title='存档' ></a>
-                {# <a class='sidebar-btn-home' href='/' title='首页' ></a> #}
                 <div class='author-img'></div>
                 <div class='author-socialInfo'>
                 {% if theme.author.github %}
-                    <a href="https://github.com/{{ theme.author.github }}" target="_blank" class="icon-github" title="github"></a>
+                    <a href="https://github.com/{{ theme.author.github }}" target="_blank" class="icon icon-github" title="github"></a>
                 {% endif %}
                 {% if theme.author.email %}
-                    <a href="mailto:{{ theme.author.email }}" target="_blank" class="icon-email" title="Email Me"></a>
+                    <a href="mailto:{{ theme.author.email }}" target="_blank" class="icon icon-email" title="Email Me"></a>
                 {% endif %}
                 </div>
             </div>
             {% if site.categories.length %}
                 <div class='categorieslist'>
-                    <p class='sidebar-title'>{{ __('categories') }}</p>
+                    <p class='categorieslist-title'>{{ __('categories') }}</p>
                     <ul>
                         {% for category in site.categories.sort('name') %}
                             {% if category.posts.length  %}
@@ -30,7 +29,7 @@
             {% endif %}
             {% if site.tags.length %}
                 <div class="tagslist" >
-                    <p class="sidebar-title">{{__('tags')}}</p>
+                    <p class="tagslist-title">{{__('tags')}}</p>
                     <ul>
                         {% set tags = site.tags.sort('posts.length','desc') %}
                         {% for tag in tags %}
