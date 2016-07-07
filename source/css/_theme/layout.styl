@@ -26,6 +26,7 @@
 }
 
 .content-wrap{
+  position: relative;
   float: right;
   box-sizing: border-box;
   width: $content-desktop;
@@ -41,6 +42,21 @@
     width: 100%;
     min-height: auto;
   }
+
+  .icon-spread {
+    position: absolute;
+    top:  4px;
+    left: 6px;
+    display: none;
+    font-size: 18px;
+    +tablet() {
+      display: none!important;
+    }
+    +mobile() {
+      display: none!important;
+    }
+  }
+
 }
 
 .content-wrap-normal {
@@ -86,4 +102,8 @@
   +mobile() {
     width: auto;
   }
+}
+
+.main-inner-center {
+  width: $content-desktop;
 }

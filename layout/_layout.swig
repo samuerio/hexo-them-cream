@@ -10,6 +10,7 @@
             <main id='main' class='main'>
                 <div class='main-inner'>
                     <div class='content-wrap content-wrap-{% block page_class %}normal{% endblock %} '>
+                        <a id='btnOpenSideBar' class='icon icon-spread' href='#'  ></a>
                         <div id='content' class='content'>
                             {% block content %}{% endblock %}
                         </div>
@@ -24,6 +25,6 @@
         </div>
         {# 引入相关脚本 #}
         {% include '_scripts/third-party/duoshuo.swig' %}
-        {% include '_scripts/closeAside.swig' %}
+        {% include '_scripts/collapseSidebar.swig' %}
     </body>
 </html>

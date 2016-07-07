@@ -2,7 +2,7 @@
     <aside class="sidebar">
         <div class="sidebar-inner">
             <div class='author'>
-                <a id='btnCloseSideBar'  class='sidebar-btn-archives' href='#' title='存档' ></a>
+                <a id='btnCloseSideBar'  class='icon icon-collapse' href='#' title='存档' ></a>
                 <div class='author-img'></div>
                 <div class='author-socialInfo'>
                 {% if theme.author.github %}
@@ -44,5 +44,4 @@
             {% endif %}
         </div>
     </aside>
-    <a id='btnOpenSideBar' class='sidebar-btn-open' href='#'  ></a>
 {% endmacro %}
