@@ -5,51 +5,21 @@
 #将favicon放置于source路径根目录
 favicon: /favicon.ico
 
-
-# ---------------------------------------------------------------
-# Font Settings
-# - Find fonts on Google Fonts (https://www.google.com/fonts)
-# - All fonts set here will have the following styles:
-#     light, light italic, normal, normal intalic, bold, bold italic
-# - Be aware that setting too much fonts will cause site running slowly
-# - Introduce in 5.0.1
-# ---------------------------------------------------------------
+#引入自定义字体资源
 font:
   enable: true
-
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  #fonts.googleapis.com (Default)
   host:
+  families: Lato:300
 
-  # Global font settings used on <body> element.
-  global:
-    # external: true will load this font family from host.
-    external: true
-    family: Lato:300
-
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
-  # Fallback to `global` font settings.
-  headings:
-    external: true
-    family:
-
-  # Font settings for posts
-  # Fallback to `global` font settings.
-  posts:
-    external: true
-    family:
-
-  # Font settings for <code> and code blocks.
-  codes:
-    external: true
-    family:
-    #family: Source+Code+Pro:400
-
-
-author_img: img/author.jpg
-
+#站点作者相关信息
 author:
-  email: zhenghe39@gmail.com     ## e.g. hsihohuang@hotmail.com
-  github: samuerio    ## e.g. hsihohuang for https://github.com/hsihohuang
+  img: img/author.jpg
+  email: zhenghe39@gmail.com
+  github: samuerio
+
+#多说评论账户配置
+duoshuo_shortname: issUn
 
 
 excerpt_link: Read More
@@ -60,9 +30,3 @@ excerpt_link: Read More
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
-duoshuo_shortname: issUn
-
-
-#资源文件所在路径
-css: /css
-vendors: /vendors
