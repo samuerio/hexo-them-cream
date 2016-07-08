@@ -5,14 +5,14 @@
 
 {% include "./head/external-fonts.swig" %}
 
-{% set font_awesome_uri = url_for(theme.vendors._internal + '/font-awesome/css/font-awesome.min.css?v=4.4.0') %}
+{% set font_awesome_uri = url_for(theme.vendors + '/font-awesome/css/font-awesome.min.css?v=4.4.0') %}
 {% if theme.vendors.fontawesome %}
   {% set font_awesome_uri = theme.vendors.fontawesome %}
 {% endif %}
 <link href="{{ font_awesome_uri }}" rel="stylesheet"  />
 
-<link href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}" rel="stylesheet"  />
+<link href="{{ url_for(theme.css) }}/main.css" rel="stylesheet"  />
 
 {% if theme.favicon %}
-  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}" />
 {% endif %}
