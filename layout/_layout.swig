@@ -2,7 +2,7 @@
 <html>
     <head>
         {% include '_partials/head.swig' %}
-        <title>{% block title %}{% endblock  %}</title>
+        <title>{% block title %}{% endblock %}</title>
     </head>
     <body lang='{{ config.language }}' >
         <div class='container' >
