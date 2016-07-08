@@ -1,5 +1,4 @@
 {% extends '_layout.swig' %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
 {% import '_macro/post-collapse.swig' as post_template %}
 
 {% set title='' %}
@@ -56,6 +55,3 @@
     {% include '_partials/pagination.swig' %}
 {% endblock %}
 
-{% block sidebar %}
-    {{ sidebar_template.render(false) }}
-{% endblock %}

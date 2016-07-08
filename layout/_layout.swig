@@ -17,9 +17,7 @@
                         {% include '_partials/comments.swig' %}
 
                     </div>
-                    {% if theme.sidebar.dispaly !== 'remove' %}
-                        {% block sidebar %}{% endblock %}
-                    {% endif %}
+                    {% include '_partials/sidebar.swig' %}
                 </div>
             </main>
         </div>
