@@ -6,7 +6,8 @@
     </head>
     <body lang='{{ config.language }}' >
         <div class='container' >
-            {% include '_partials/navbar.swig' %}
+            {#{% include '_partials/navbar.swig' %}#}
+            <div class='headband'></div>
             <main id='main' class='main'>
                 <div class='main-inner'>
                     <div class='content-wrap content-wrap-{% block page_class %}normal{% endblock %} '>
@@ -17,7 +18,7 @@
                         {% include '_partials/comments.swig' %}
 
                     </div>
-                    {% include '_partials/sidebar.swig' %}
+                    {% block sidebar %}{% endblock %}
                 </div>
             </main>
         </div>

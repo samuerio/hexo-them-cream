@@ -1,5 +1,6 @@
 {% extends '_layout.swig' %}
 {% import '_macro/post-collapse.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
 {% set title='' %}
 {% if page.category %}
@@ -53,5 +54,10 @@
         {% endfor %}
     </section>
     {% include '_partials/pagination.swig' %}
+{% endblock %}
+
+
+{% block sidebar %}
+    {{sidebar_template.render(false)}}
 {% endblock %}
 
