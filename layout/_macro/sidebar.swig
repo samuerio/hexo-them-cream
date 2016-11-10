@@ -1,33 +1,41 @@
 {% macro render(is_post) %}
     <aside class="sidebar">
         <div class="sidebar-inner">
-            <div class='author'>
-                <a id='btnCloseSideBar'  class='icon icon-collapse' href='#' title='存档' ></a>
-                <div class='author-img'></div>
-                <div class='author-socialInfo'>
-                {% if theme.author.github %}
-                    <a href="https://github.com/{{ theme.author.github }}" target="_blank" class="icon icon-github" title="github"></a>
+                {% if !is_post %}
+                    {% set siteinfoclass = 'active' %}
                 {% endif %}
-                {% if theme.author.email %}
-                    <a href="mailto:{{ theme.author.email }}" target="_blank" class="icon icon-email" title="Email Me"></a>
-                {% endif %}
-                </div>
-            </div>
-            {% include '../_partials/sidebar/category.swig' %}
-            {% include '../_partials/sidebar/tag.swig' %}
-            {% if is_post %}
                 {% set toc = toc(page.content, { "class": "nav", list_number:false  }) %}
-                <div class='horizontal-line'></div>
-                <div class='post-nav'>
-                    <div class='post-nav-inner'>
-                        <div class='post-nav-heading'>文章目录</div>
-                        <div class='post-nav-body'>
-                            <div class='highlight-title'></div>
-                            {{toc}}
+                {% if is_post %}
+                <ul class='sidebar-nav' >
+                    <li class='sidebar-nav-toc active' href="#post-menu"  data-toggle="tab" >文章目录</li>
+                    &nbsp&nbsp
+                    <li class='sidebar-nav-overview' href="#site-info" data-toggle="tab" >站点概况</li>
+                </ul>
+                {% endif %}
+                <div class='tab-content'>
+                    {% if is_post %}
+                    <div class='tab-panel post-nav-body active' id='post-menu'>
+                        <div class='highlight-title' style='display:none;' ></div>
+                        {{toc}}
+                    </div>
+                    {% endif %}
+                    <div class='tab-panel {{siteinfoclass}} ' id='site-info' >
+                        <div class='author'>
+                            {#<a id='btnCloseSideBar'  class='icon icon-collapse' href='#' title='存档' ></a>#}
+                            <div class='author-img'></div>
+                            <div class='author-socialInfo'>
+                            {% if theme.author.github %}
+                                <a href="https://github.com/{{ theme.author.github }}" target="_blank" class="icon icon-github" title="github"></a>
+                            {% endif %}
+                            {% if theme.author.email %}
+                                <a href="mailto:{{ theme.author.email }}" target="_blank" class="icon icon-email" title="Email Me"></a>
+                            {% endif %}
+                            </div>
                         </div>
+                        {% include '../_partials/sidebar/category.swig' %}
+                        {% include '../_partials/sidebar/tag.swig' %}
                     </div>
                 </div>
-            {% endif %}
         </div>
     </aside>
 {% endmacro %}
