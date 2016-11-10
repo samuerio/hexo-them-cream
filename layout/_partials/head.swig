@@ -5,7 +5,7 @@
 
 {% include "./head/external-fonts.swig" %}
 
-{% set font_awesome_uri = url_for('/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0') %}
+{% set font_awesome_uri = url_for('/fonts/font-awesome/css/font-awesome.min.css?v=4.4.0') %}
 
 {% if theme.vendors.fontawesome %}
   {% set font_awesome_uri = theme.vendors.fontawesome %}
