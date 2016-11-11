@@ -13,6 +13,33 @@
   }
 }
 
+.sidebar-nav {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    &.active {
+      color: #fc6423;
+    }
+  }
+}
+
+.sidebar-nav-content {
+  padding:10px 0;
+
+  .nav-panel {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+
 $sidebar-title {
     padding: 0 0 .3125em 0;
     margin-bottom: 0;
@@ -26,7 +53,7 @@ $sidebar-title {
 @import "sidebar-author"
 @import "sidebar-categorieslist"
 @import "sidebar-tagslist"
-@import "sidebar-post-nav"
+@import "sidebar-post-toc"
 
 
 

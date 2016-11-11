@@ -4,22 +4,22 @@
                 {% if !is_post %}
                     {% set siteinfoclass = 'active' %}
                 {% endif %}
-                {% set toc = toc(page.content, { "class": "nav", list_number:false  }) %}
+                {% set toc = toc(page.content, { "class": "nav-menu", list_number:false  }) %}
                 {% if is_post %}
                 <ul class='sidebar-nav' >
-                    <li class='sidebar-nav-toc active' href="#post-menu"  data-toggle="tab" >文章目录</li>
+                    <li class='active' href="#post-toc"  data-toggle="tab" >文章目录</li>
                     &nbsp&nbsp
-                    <li class='sidebar-nav-overview' href="#site-info" data-toggle="tab" >站点概况</li>
+                    <li href="#site-info" data-toggle="tab" >站点概况</li>
                 </ul>
                 {% endif %}
-                <div class='tab-content'>
+                <div class='sidebar-nav-content'>
                     {% if is_post %}
-                    <div class='tab-panel post-nav-body active' id='post-menu'>
+                    <div class='nav-panel post-toc active' id='post-toc'>
                         <div class='highlight-title' style='display:none;' ></div>
                         {{toc}}
                     </div>
                     {% endif %}
-                    <div class='tab-panel {{siteinfoclass}} ' id='site-info' >
+                    <div class='nav-panel {{siteinfoclass}} ' id='site-info' >
                         <div class='author'>
                             {#<a id='btnCloseSideBar'  class='icon icon-collapse' href='#' title='存档' ></a>#}
                             <div class='author-img'></div>

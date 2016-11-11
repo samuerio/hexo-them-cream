@@ -1,0 +1,53 @@
+
+/*配合jquery-spyNavMenu插件使用,当滚动遮住文章目录导航时,会给目录加上该类*/
+.post-toc-fix {
+  position: fixed;
+  top: 0;
+}
+
+.post-toc {
+  position: relative;
+  padding: 0 12px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 3px;
+    background: #eee;
+    border-radius: 5px;
+    z-index: -3;
+  }
+
+  .highlight-title {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    background: #f3f3f3;
+    z-index: -2;
+    border-left: 3px solid #009a61;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+}
+
+.nav-menu {
+  position: relative;
+  margin: 0;
+  padding-left: 18px;
+  list-style-type: square;
+}
+
+.nav-menu-item{
+  z-index: 3;
+
+  a {
+    display: block;
+  }
+}
+
+

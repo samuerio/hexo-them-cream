@@ -24,6 +24,6 @@
         </div>
         {# 引入相关脚本 #}
         {% include '_scripts/third-party/duoshuo.swig' %}
-        {% include '_scripts/collapseSidebar.swig' %}
+        {% include '_scripts/spyTocMenu.swig' %}
     </body>
 </html>

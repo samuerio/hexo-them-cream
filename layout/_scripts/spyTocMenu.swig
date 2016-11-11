@@ -16,8 +16,10 @@
         });
         */
 
-        var navMenu = $('.nav').length && $('.nav').spyNavMenu({
+        var navMenu = $('.nav-menu').length && $('.nav-menu').spyNavMenu({
             activeClass:'active',
+            fixOffsetClass:'post-toc-fix',
+            distinguishLineScale:0,
             events:{
                 'scrollNav':function($curNavItem,$navMenu,curNavItemHeight,curNavItemTop){
                     if(!$curNavItem){
